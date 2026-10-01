@@ -1,0 +1,38 @@
+# OS / editor files
+.DS_Store
+__MACOSX/
+._*
+.idea/
+.vscode/
+*~
+# Credentials and private working data
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.pfx
+private/
+presentations/
+backups/
+state.json
+timer.json
+# Native builds
+*.app/
+.script-companion-build.*/
+build.log
+.build/
+DerivedData/
+# Python and generated tests
+.venv/
+__pycache__/
+*.pyc
+Tests/artifacts/
+Tests/*.log
+Tests/*.json
+Tests/*.png
+# Do not accidentally add unsanitized presentations outside fixtures/demo
+*.ppt
+*.pptx
+!Demo/Rehearsal.pptx
+!Tests/test_notes.pptx

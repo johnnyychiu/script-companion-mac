@@ -1,0 +1,121 @@
+name: Import approved source package
+
+on:
+  push:
+    branches: [main]
+    paths: ['script-companion-source.zip']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-script-companion-source
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'johnnyychiu/script-companion-mac' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - name: Verify and publish the approved source package
+        shell: bash
+        run: |
+          python3 - <<'PYIMPORT'
+          from pathlib import Path, PurePosixPath
+          import hashlib
+          import os
+          import stat
+          import subprocess
+          import zipfile
+
+          ARCHIVE = "script-companion-source.zip"
+          EXPECTED_SHA256 = "7b119fd381c42d455d7ed16d199a22f97a2695f75420edca59f6908b367d8c4a"
+          EXPECTED_FILES = 86
+
+          def git(*args):
+              return subprocess.check_output(["git", *args], text=True).strip()
+
+          root = Path.cwd().resolve()
+          if (root / "Source/reader.html").exists():
+              raise SystemExit("Source already exists. This one-time importer will not overwrite it.")
+          archive = root / ARCHIVE
+          if not archive.is_file() or archive.is_symlink():
+              raise SystemExit("Upload script-companion-source.zip to the repository root first.")
+          if hashlib.sha256(archive.read_bytes()).hexdigest() != EXPECTED_SHA256:
+              raise SystemExit("Archive checksum does not match the approved publication package. Nothing imported.")
+
+          # Only bootstrap files may already be tracked; never overwrite later user work.
+          bootstrap = {ARCHIVE, ".gitignore", ".github/workflows/tests.yml", ".github/workflows/import-source.yml"}
+          tracked = set(git("ls-files", "-z").split("\0")) - {""}
+          if tracked - bootstrap:
+              raise SystemExit("Unexpected existing files. Review the repository before importing.")
+
+          root_files = {".gitattributes", ".gitignore", "Build Mac App.command", "CHANGELOG.md",
+                        "CONTRIBUTING.md", "LICENSE", "README.md", "SECURITY.md", "START HERE.html",
+                        "THIRD_PARTY_NOTICES.md", "requirements-dev.txt"}
+          folders = {"Source", "Demo", "Tests", "docs", "Licenses"}
+          github_files = {".github/ISSUE_TEMPLATE/bug_report.yml",
+                          ".github/ISSUE_TEMPLATE/feature_request.md",
+                          ".github/pull_request_template.md", ".github/workflows/tests.yml"}
+          entries = []
+          with zipfile.ZipFile(archive) as z:
+              infos = z.infolist()
+              if len(infos) != EXPECTED_FILES or sum(i.file_size for i in infos) > 20_000_000:
+                  raise SystemExit("Unexpected archive contents.")
+              names = set()
+              for info in infos:
+                  name = info.filename
+                  path = PurePosixPath(name)
+                  if (not name or path.is_absolute() or str(path) != name or ".." in path.parts
+                          or ".git" in path.parts or "\\" in name or "\n" in name or "\r" in name
+                          or name in names or info.is_dir()):
+                      raise SystemExit("Unsafe or duplicate archive path.")
+                  if name not in root_files and name not in github_files and path.parts[0] not in folders:
+                      raise SystemExit("Unapproved archive location.")
+                  mode = info.external_attr >> 16
+                  if not stat.S_ISREG(mode):
+                      raise SystemExit("Only ordinary files are accepted.")
+                  destination = root.joinpath(*path.parts)
+                  if any(p.is_symlink() for p in [destination, *destination.parents] if p != root):
+                      raise SystemExit("Symbolic links are not accepted.")
+                  data = z.read(info)
+                  if destination.exists():
+                      if name not in bootstrap or not destination.is_file() or destination.read_bytes() != data:
+                          raise SystemExit("An existing file differs. Nothing has been overwritten.")
+                  names.add(name)
+                  entries.append((name, destination, data))
+
+          # Validate the complete archive before writing any source file.
+          for name, destination, data in entries:
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              destination.write_bytes(data)
+              destination.chmod(0o755 if name == "Build Mac App.command" else 0o644)
+
+          git("config", "user.name", "github-actions[bot]")
+          git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+          subprocess.run(["git", "add", "--", *[n for n, _, _ in entries]], check=True)
+          git("rm", "--", ARCHIVE)
+          # The browser-test workflow was installed separately; the import must not change workflows.
+          changed = git("diff", "--cached", "--name-only", "-z").split("\0")
+          if any(p.startswith(".github/workflows/") for p in changed):
+              raise SystemExit("Unexpected workflow change. Refusing to publish.")
+          git("-c", "commit.gpgsign=false", "commit", "-m",
+              "Publish Script Companion 0.5.3 source, README, screenshots and tests")
+          # Never force-push. A concurrent update causes a safe rejection.
+          git("push", "origin", "HEAD:main")
+          commit = git("rev-parse", "HEAD")
+          remote = git("ls-remote", "origin", "refs/heads/main").split()[0]
+          if commit != remote:
+              raise SystemExit("Remote changed after upload. Check the repository before claiming completion.")
+          print(f"Published and verified {len(entries)} project files at {commit}.")
+          summary = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary:
+              with open(summary, "a", encoding="utf-8") as report:
+                  report.write(f"## Source published\n86 project files, including four README screenshots.\n\nCommit: `{commit}`\n\nBrowser tests run separately; a successful import is not a native Mac test.\n")
+          PYIMPORT

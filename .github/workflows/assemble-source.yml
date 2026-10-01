@@ -1,0 +1,114 @@
+name: Assemble approved source upload
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.upload-parts/complete'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assemble-script-companion-source
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'johnnyychiu/script-companion-mac' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Check out main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Assemble, verify, and publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import base64, hashlib, stat, subprocess, zipfile
+
+          EXPECTED_SHA256 = "7b119fd381c42d455d7ed16d199a22f97a2695f75420edca59f6908b367d8c4a"
+          EXPECTED_FILES = 86
+          root = Path.cwd().resolve()
+          parts_dir = root / ".upload-parts"
+          parts = sorted(parts_dir.glob("part-*.b64"))
+          if not parts:
+              raise SystemExit("No upload parts found.")
+
+          complete = (parts_dir / "complete").read_text(encoding="utf-8").strip().splitlines()
+          if len(complete) != 2 or complete[0] != EXPECTED_SHA256:
+              raise SystemExit("Upload marker is invalid.")
+          expected_parts = int(complete[1])
+          if len(parts) != expected_parts:
+              raise SystemExit(f"Expected {expected_parts} upload parts, found {len(parts)}.")
+
+          encoded = "".join(p.read_text(encoding="ascii").strip() for p in parts)
+          archive_bytes = base64.b64decode(encoded, validate=True)
+          digest = hashlib.sha256(archive_bytes).hexdigest()
+          if digest != EXPECTED_SHA256:
+              raise SystemExit(f"Archive checksum mismatch: {digest}")
+
+          archive = Path("/tmp/script-companion-source.zip")
+          archive.write_bytes(archive_bytes)
+
+          root_files = {".gitattributes", ".gitignore", "Build Mac App.command", "CHANGELOG.md",
+                        "CONTRIBUTING.md", "LICENSE", "README.md", "SECURITY.md", "START HERE.html",
+                        "THIRD_PARTY_NOTICES.md", "requirements-dev.txt"}
+          folders = {"Source", "Demo", "Tests", "docs", "Licenses"}
+          github_files = {".github/ISSUE_TEMPLATE/bug_report.yml",
+                          ".github/ISSUE_TEMPLATE/feature_request.md",
+                          ".github/pull_request_template.md",
+                          ".github/workflows/tests.yml"}
+
+          entries = []
+          with zipfile.ZipFile(archive) as z:
+              infos = z.infolist()
+              if len(infos) != EXPECTED_FILES or sum(i.file_size for i in infos) > 20_000_000:
+                  raise SystemExit("Unexpected archive contents.")
+              seen = set()
+              for info in infos:
+                  name = info.filename
+                  path = PurePosixPath(name)
+                  if (not name or path.is_absolute() or str(path) != name or ".." in path.parts
+                          or ".git" in path.parts or "\\" in name or "\n" in name or "\r" in name
+                          or name in seen or info.is_dir()):
+                      raise SystemExit(f"Unsafe or duplicate archive path: {name!r}")
+                  if name not in root_files and name not in github_files and path.parts[0] not in folders:
+                      raise SystemExit(f"Unapproved archive location: {name}")
+                  mode = info.external_attr >> 16
+                  if mode and not stat.S_ISREG(mode):
+                      raise SystemExit(f"Only ordinary files are accepted: {name}")
+                  data = z.read(info)
+                  seen.add(name)
+                  entries.append((name, data))
+
+          # Keep the bootstrap test workflow already installed in the repository.
+          entries = [(n, d) for (n, d) in entries if n != ".github/workflows/tests.yml"]
+
+          for name, data in entries:
+              dest = root.joinpath(*PurePosixPath(name).parts)
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              if dest.exists() and dest.read_bytes() != data:
+                  if name in {".gitignore"}:
+                      # The bootstrap copy is expected to match the publication package.
+                      raise SystemExit(f"Existing bootstrap file differs: {name}")
+                  if name.startswith(".github/"):
+                      raise SystemExit(f"Refusing to overwrite existing GitHub configuration: {name}")
+              dest.write_bytes(data)
+              dest.chmod(0o755 if name == "Build Mac App.command" else 0o644)
+
+          subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+          subprocess.run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
+          subprocess.run(["git", "add", "--", *[n for n, _ in entries]], check=True)
+          subprocess.run(["git", "rm", "-r", "--", ".upload-parts"], check=True)
+          subprocess.run(["git", "-c", "commit.gpgsign=false", "commit", "-m",
+                          "Publish Script Companion 0.5.3 source, README, screenshots and tests"], check=True)
+          subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
+          print("Published Script Companion source successfully.")
+          PY

@@ -5,11 +5,13 @@ on:
     branches: [main]
     paths-ignore:
       - 'script-companion-source.zip'
+      - '.upload-parts/**'
       - '.github/workflows/import-source.yml'
+      - '.github/workflows/assemble-source.yml'
   pull_request:
   workflow_dispatch:
   workflow_run:
-    workflows: ['Import approved source package']
+    workflows: ['Import approved source package', 'Assemble approved source upload']
     types: [completed]
     branches: [main]
 

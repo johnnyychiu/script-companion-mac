@@ -1,0 +1,229 @@
+{
+  "environment": "Linux Chromium; native packets simulated, not actual Mac/PowerPoint",
+  "checks": [
+    {
+      "test": "Clock displays seconds in 24-hour mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock advances without changing the slide or line",
+      "result": "PASS"
+    },
+    {
+      "test": "Click switches clock to 12-hour mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Click restores 24-hour mode",
+      "result": "PASS"
+    },
+    {
+      "test": "PowerPoint import retains stable slide IDs",
+      "result": "PASS"
+    },
+    {
+      "test": "Seven supplied lesson sentences are speaker-note lines",
+      "result": "PASS"
+    },
+    {
+      "test": "Accidental next slide then back restores line 4 on lesson slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Forward navigation also restores that slide\u2019s line 2",
+      "result": "PASS"
+    },
+    {
+      "test": "Restart button resets only the current slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Other slides keep their positions after current-slide restart",
+      "result": "PASS"
+    },
+    {
+      "test": "Wrong image count is rejected before mapping",
+      "result": "PASS"
+    },
+    {
+      "test": "Unordered image selection maps by slide numbers",
+      "result": "PASS"
+    },
+    {
+      "test": "Images are not applied before explicit confirmation",
+      "result": "PASS"
+    },
+    {
+      "test": "Arrow keys do not move script while mapping dialog is open",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmed image set appears on current slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview changes with the selected slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Returning restores both preview image and highlighted line",
+      "result": "PASS"
+    },
+    {
+      "test": "Slide preview can be enlarged",
+      "result": "PASS"
+    },
+    {
+      "test": "Large preview dialog prevents accidental slide jumps",
+      "result": "PASS"
+    },
+    {
+      "test": "P hides preview without changing line",
+      "result": "PASS"
+    },
+    {
+      "test": "P restores preview and image",
+      "result": "PASS"
+    },
+    {
+      "test": "Backup includes images and independent per-slide positions",
+      "result": "PASS"
+    },
+    {
+      "test": "Restored backup retains image, current slide and current line",
+      "result": "PASS"
+    },
+    {
+      "test": "Restored backup retains other slide\u2019s saved line",
+      "result": "PASS"
+    },
+    {
+      "test": "ZIP of exported slides ignores Mac metadata",
+      "result": "PASS"
+    },
+    {
+      "test": "Corrupt image does not replace working previews",
+      "result": "PASS"
+    },
+    {
+      "test": "Storage quota fallback retains notes and position instead of losing everything",
+      "result": "PASS"
+    },
+    {
+      "test": "Storage quota fallback reports image backup is needed",
+      "result": "PASS"
+    },
+    {
+      "test": "Right requests native navigation without optimistic preview change",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmed native slide changes restore previous highlighted line and image",
+      "result": "PASS"
+    },
+    {
+      "test": "Unchanged live poll preserves preview and highlighted DOM node",
+      "result": "PASS"
+    },
+    {
+      "test": "Edited live notes relocate the remembered sentence",
+      "result": "PASS"
+    },
+    {
+      "test": "Revisiting updated slide retains its adjusted line position",
+      "result": "PASS"
+    },
+    {
+      "test": "Reordered slide keeps its line and image via stable slide ID",
+      "result": "PASS"
+    },
+    {
+      "test": "Temporary notes failure does not erase the saved line",
+      "result": "PASS"
+    },
+    {
+      "test": "Unlink labels previews as script-selected, not live",
+      "result": "PASS"
+    },
+    {
+      "test": "Relinking same presentation retains line positions and previews",
+      "result": "PASS"
+    },
+    {
+      "test": "Navigation failure packet keeps valid note following but disables slide commands",
+      "result": "PASS"
+    },
+    {
+      "test": "Follow-only fallback is clearly labelled",
+      "result": "PASS"
+    },
+    {
+      "test": "PowerPoint changes still update preview in follow-only mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Different deck does not inherit positions or images despite reused slide IDs",
+      "result": "PASS"
+    },
+    {
+      "test": "Image mapping dialog tells native app to suspend captured keys",
+      "result": "PASS"
+    },
+    {
+      "test": "Native line events are ignored during image mapping",
+      "result": "PASS"
+    },
+    {
+      "test": "Backup validation rejects external and SVG image payloads",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview layout has no horizontal overflow at 1180x850",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock remains visible at 1180x850",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview layout has no horizontal overflow at 920x700",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock remains visible at 920x700",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview layout has no horizontal overflow at 660x540",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock remains visible at 660x540",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview layout has no horizontal overflow at 520x700",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock remains visible at 520x700",
+      "result": "PASS"
+    },
+    {
+      "test": "Preview layout has no horizontal overflow at 390x844",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock remains visible at 390x844",
+      "result": "PASS"
+    },
+    {
+      "test": "No external network requests during preview, ZIP import, clock or syncing tests",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript errors during new-feature tests",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+PASS shared Swift key-routing policy: Up/Down only; Left/Right and all other tested keycodes pass through.

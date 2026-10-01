@@ -1,0 +1,149 @@
+{
+  "environment": "Offline Linux Chromium; native PowerPoint responses simulated",
+  "checks": [
+    {
+      "test": "Version is visible in the reader",
+      "result": "PASS"
+    },
+    {
+      "test": "Window setup cannot be used before linking",
+      "result": "PASS"
+    },
+    {
+      "test": "Live link offers a slideshow-window setup button",
+      "result": "PASS"
+    },
+    {
+      "test": "Setup sends a dedicated configuration request",
+      "result": "PASS"
+    },
+    {
+      "test": "Setup does not change the reader slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Ready state is distinct from confirmed navigation",
+      "result": "PASS"
+    },
+    {
+      "test": "Down still changes only the line",
+      "result": "PASS"
+    },
+    {
+      "test": "Down stops at last line without changing slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Next button sends exactly a next slide request",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader does not optimistically advance before confirmation",
+      "result": "PASS"
+    },
+    {
+      "test": "Duplicate button press is disabled during verification",
+      "result": "PASS"
+    },
+    {
+      "test": "Unconfirmed request preserves notes and current line",
+      "result": "PASS"
+    },
+    {
+      "test": "Unconfirmed request does not permanently lock buttons",
+      "result": "PASS"
+    },
+    {
+      "test": "Failure is visible to presenter",
+      "result": "PASS"
+    },
+    {
+      "test": "UI does not automatically resend failed navigation",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmed next slide loads actual notes at first line",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader-focused Left requests previous slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Returning after accidental change restores saved highlight",
+      "result": "PASS"
+    },
+    {
+      "test": "Focus refusal keeps the notes connection and configuration button usable",
+      "result": "PASS"
+    },
+    {
+      "test": "Slide-button refusal does not disable independent line-key mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Legacy rejected-command status is recognised",
+      "result": "PASS"
+    },
+    {
+      "test": "New keyboard result recovers legacy-disabled controls without relinking",
+      "result": "PASS"
+    },
+    {
+      "test": "Recovery updates the live-status label as well as buttons",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock visible at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes retain usable height at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock visible at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes retain usable height at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock visible at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes retain usable height at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Unlink forgets session-only window setup",
+      "result": "PASS"
+    },
+    {
+      "test": "Unlink releases captured keys",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript exceptions",
+      "result": "PASS"
+    },
+    {
+      "test": "No external network requests",
+      "result": "PASS"
+    }
+  ]
+}

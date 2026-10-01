@@ -1,0 +1,40 @@
+PASS Version is visible in the reader
+PASS Window setup cannot be used before linking
+PASS Live link offers a slideshow-window setup button
+PASS Setup sends a dedicated configuration request
+PASS Setup does not change the reader slide
+PASS Ready state is distinct from confirmed navigation
+PASS Down still changes only the line
+PASS Down stops at last line without changing slide
+PASS Next button sends exactly a next slide request
+PASS Reader does not optimistically advance before confirmation
+PASS Duplicate button press is disabled during verification
+PASS Unconfirmed request preserves notes and current line
+PASS Unconfirmed request does not permanently lock buttons
+PASS Failure is visible to presenter
+PASS UI does not automatically resend failed navigation
+PASS Confirmed next slide loads actual notes at first line
+PASS Reader-focused Left requests previous slide
+PASS Returning after accidental change restores saved highlight
+PASS Focus refusal keeps the notes connection and configuration button usable
+PASS Slide-button refusal does not disable independent line-key mode
+PASS Legacy rejected-command status is recognised
+PASS New keyboard result recovers legacy-disabled controls without relinking
+PASS Recovery updates the live-status label as well as buttons
+PASS No horizontal overflow at 1180
+PASS Clock visible at 1180
+LAYOUT 1180 [['main', 391], ['reader', 369], ['notice', 52], ['console', 406], ['slidehead', 45], ['top', 42], ['toolbar', 43], ['statusbar', 26]]
+PASS Notes retain usable height at 1180
+PASS No horizontal overflow at 660
+PASS Clock visible at 660
+LAYOUT 660 [['main', 223], ['reader', 201], ['notice', 52], ['console', 265], ['slidehead', 45], ['top', 38], ['toolbar', 77], ['statusbar', 26]]
+PASS Notes retain usable height at 660
+PASS No horizontal overflow at 390
+PASS Clock visible at 390
+LAYOUT 390 [['main', 386], ['reader', 364], ['notice', 52], ['console', 405], ['slidehead', 39], ['top', 62], ['toolbar', 77], ['statusbar', 26]]
+PASS Notes retain usable height at 390
+PASS Unlink forgets session-only window setup
+PASS Unlink releases captured keys
+PASS No JavaScript exceptions
+PASS No external network requests
+36 slide-button UI checks passed; native macOS keyboard delivery is not tested.

@@ -1,0 +1,245 @@
+{
+  "environment": "Offline Linux Chromium; virtual elapsed time; native packets simulated",
+  "checks": [
+    {
+      "test": "Timer opens ready and at zero",
+      "result": "PASS"
+    },
+    {
+      "test": "Clock and elapsed timer are separate",
+      "result": "PASS"
+    },
+    {
+      "test": "Start counts elapsed time",
+      "result": "PASS"
+    },
+    {
+      "test": "Large display uses hours minutes seconds",
+      "result": "PASS"
+    },
+    {
+      "test": "Slide changes do not reset total timer",
+      "result": "PASS"
+    },
+    {
+      "test": "Current slide has its own time",
+      "result": "PASS"
+    },
+    {
+      "test": "Return restores the highlighted line",
+      "result": "PASS"
+    },
+    {
+      "test": "Return adds to that slide\u2019s earlier time",
+      "result": "PASS"
+    },
+    {
+      "test": "Pause excludes paused time",
+      "result": "PASS"
+    },
+    {
+      "test": "Paused UI offers Resume",
+      "result": "PASS"
+    },
+    {
+      "test": "T toggles timer without changing line",
+      "result": "PASS"
+    },
+    {
+      "test": "Cancel reset preserves elapsed time",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset clears total and per-slide time",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset does not reset the highlighted line",
+      "result": "PASS"
+    },
+    {
+      "test": "Typing T in the editor does not run the timer",
+      "result": "PASS"
+    },
+    {
+      "test": "Running timer checkpoints separately from notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Reopened browser state restores the elapsed value paused",
+      "result": "PASS"
+    },
+    {
+      "test": "Closed/paused reader time is not added on restore",
+      "result": "PASS"
+    },
+    {
+      "test": "Backup includes elapsed time and per-slide times",
+      "result": "PASS"
+    },
+    {
+      "test": "Backup restore preserves highlighted line and paused timing",
+      "result": "PASS"
+    },
+    {
+      "test": "Repeated fast polls keep the same highlighted DOM node",
+      "result": "PASS"
+    },
+    {
+      "test": "Repeated fast polls preserve the line number",
+      "result": "PASS"
+    },
+    {
+      "test": "Fast confirmed slide change uses cached notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Fast slide changes do not stop timing",
+      "result": "PASS"
+    },
+    {
+      "test": "Fast return restores the previous line",
+      "result": "PASS"
+    },
+    {
+      "test": "Requested slide does not optimistically change notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Timer continues during PowerPoint verification",
+      "result": "PASS"
+    },
+    {
+      "test": "Busy reader does not send a duplicate slide shortcut",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmation unblocks slide controls",
+      "result": "PASS"
+    },
+    {
+      "test": "Different slide ID never reuses another slide\u2019s notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Full notes read replaces pending placeholder",
+      "result": "PASS"
+    },
+    {
+      "test": "Unlink leaves elapsed timer running until paused",
+      "result": "PASS"
+    },
+    {
+      "test": "Native timer checkpoint uses dedicated small messages",
+      "result": "PASS"
+    },
+    {
+      "test": "Native saved timer restores paused with HH:MM:SS",
+      "result": "PASS"
+    },
+    {
+      "test": "Invalid saved time is clamped safely",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes above preview and timer at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Current line anchored near reading top at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Usable notes height at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes above preview and timer at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "Current line anchored near reading top at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "Usable notes height at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes above preview and timer at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Current line anchored near reading top at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Usable notes height at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes above preview and timer at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "Current line anchored near reading top at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "Usable notes height at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes above preview and timer at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Current line anchored near reading top at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Usable notes height at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Compact keeps notes above preview",
+      "result": "PASS"
+    },
+    {
+      "test": "Last line also aligns at top, not the bottom",
+      "result": "PASS"
+    },
+    {
+      "test": "Hiding preview does not hide timer or clock",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript exceptions",
+      "result": "PASS"
+    },
+    {
+      "test": "No external requests",
+      "result": "PASS"
+    }
+  ]
+}

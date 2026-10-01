@@ -1,0 +1,1532 @@
+{
+  "generated_at_utc": "2026-10-01T12:58:26.018074+00:00",
+  "scope": "Browser reader and simulated native packets; isolated Swift/Foundation checks only. No macOS app build, WKWebView, PowerPoint, or projector validation.",
+  "system": "Linux",
+  "python": "3.13.5",
+  "playwright": "1.57.0",
+  "chromium_executable_override": true,
+  "source_sha256": {
+    "Entitlements.plist": "1aa386b08a27a8eb2bcc0ee7fc95b0e273470ea0c215e99567493a36620280e3",
+    "Info.plist": "31757531f5f4824a9c6675acee38d91c2edbe4b587bbe90a2118fe5fa1d9274b",
+    "PowerPoint.applescript": "870902381601222a1c78e5ad547270879590a0d2df44e7132840af659b0eae0f",
+    "PowerPointPosition.applescript": "71af320ee96f41ca72f9726b899c25deba05e2e5d0b29556e247234d8a95b753",
+    "PowerPointPositionParser.swift": "198a2d98a93db0b834a1bf08e153e99cbdfed5fbfa5e31c6e568c65e72de7943",
+    "PresentationKeyPolicy.swift": "b4c9561872d9577da8b39fa1b75ace17c9f5598699beac81891012e72f61c500",
+    "ScriptCompanion.swift": "38b8ba4cdec2d61e6a5f58d526f0da42375f651ad9df850fba6ce94c21057285",
+    "SlideButtonController.swift": "e10fbb5bf0b328005d0b55cb25a971c2c0c366976551a906aa8d1003f9b542e6",
+    "SlideNavigationPolicy.swift": "c8f1679236a3e5a744a9fa6c7800bac955094a59d45820fcf5d115c95264ba0e",
+    "reader.html": "d1f57268fe6bdec26d367d5f2aaca063190e3805dbf7fa0311ebbc023f2691cc"
+  },
+  "browser_checks_passed": 346,
+  "browser_checks_not_run": 1,
+  "suites": [
+    {
+      "suite": "test_notes_at_top",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 3.53,
+      "log": "test_notes_at_top.log",
+      "checks": [
+        {
+          "test": "No slide heading remains inside the notes area",
+          "result": "PASS"
+        },
+        {
+          "test": "Slide heading is beside the snapshot in the lower session panel",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes area starts at the first content pixel",
+          "result": "PASS"
+        },
+        {
+          "test": "Restored highlighted line starts 4 pixels from content top",
+          "result": "PASS"
+        },
+        {
+          "test": "Full slide title remains in a hover tooltip",
+          "result": "PASS"
+        },
+        {
+          "test": "Accidental slide change restores the line and preview",
+          "result": "PASS"
+        },
+        {
+          "test": "Returning line keeps the 4-pixel top inset",
+          "result": "PASS"
+        },
+        {
+          "test": "Next line is also aligned at 4 pixels",
+          "result": "PASS"
+        },
+        {
+          "test": "First line has no extra blank spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "Last line can reach the same top position",
+          "result": "PASS"
+        },
+        {
+          "test": "Presentation timer still counts",
+          "result": "PASS"
+        },
+        {
+          "test": "Hidden snapshot does not hide the relocated slide identity",
+          "result": "PASS"
+        },
+        {
+          "test": "Showing the snapshot does not move notes downward",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset-all leaves a running timer untouched",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset-all returns current line to top without changing the slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset-all still resets other slides too",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 normal: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 normal: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 normal: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 normal: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 compact: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 compact: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 compact: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "1180x760 compact: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 normal: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 normal: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 normal: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 normal: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 compact: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 compact: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 compact: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "920x700 compact: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 normal: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 normal: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 normal: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 normal: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 compact: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 compact: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 compact: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "660x540 compact: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 normal: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 normal: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 normal: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 normal: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 compact: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 compact: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 compact: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "520x700 compact: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 normal: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 normal: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 normal: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 normal: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 compact: notes have no top header or spacer",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 compact: metadata below notes and above timer",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 compact: no horizontal overflow",
+          "result": "PASS"
+        },
+        {
+          "test": "390x844 compact: reader retains at least 160 pixels height",
+          "result": "PASS"
+        },
+        {
+          "test": "Opening setup and increasing text retain top alignment",
+          "result": "PASS"
+        },
+        {
+          "test": "Live slide packet updates the relocated title and count",
+          "result": "PASS"
+        },
+        {
+          "test": "Live return restores line memory at the upper edge",
+          "result": "PASS"
+        },
+        {
+          "test": "Line movement sends no PowerPoint slide request",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript exceptions",
+          "result": "PASS"
+        },
+        {
+          "test": "No external requests",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_notes_first_timer",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 5.8,
+      "log": "test_notes_first_timer.log",
+      "checks": [
+        {
+          "test": "Timer opens ready and at zero",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock and elapsed timer are separate",
+          "result": "PASS"
+        },
+        {
+          "test": "Start counts elapsed time",
+          "result": "PASS"
+        },
+        {
+          "test": "Large display uses hours minutes seconds",
+          "result": "PASS"
+        },
+        {
+          "test": "Slide changes do not reset total timer",
+          "result": "PASS"
+        },
+        {
+          "test": "Current slide has its own time",
+          "result": "PASS"
+        },
+        {
+          "test": "Return restores the highlighted line",
+          "result": "PASS"
+        },
+        {
+          "test": "Return adds to that slide\u2019s earlier time",
+          "result": "PASS"
+        },
+        {
+          "test": "Pause excludes paused time",
+          "result": "PASS"
+        },
+        {
+          "test": "Paused UI offers Resume",
+          "result": "PASS"
+        },
+        {
+          "test": "T toggles timer without changing line",
+          "result": "PASS"
+        },
+        {
+          "test": "Cancel reset preserves elapsed time",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset clears total and per-slide time",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset does not reset the highlighted line",
+          "result": "PASS"
+        },
+        {
+          "test": "Typing T in the editor does not run the timer",
+          "result": "PASS"
+        },
+        {
+          "test": "Running timer checkpoints separately from notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Reopened browser state restores the elapsed value paused",
+          "result": "PASS"
+        },
+        {
+          "test": "Closed/paused reader time is not added on restore",
+          "result": "PASS"
+        },
+        {
+          "test": "Backup includes elapsed time and per-slide times",
+          "result": "PASS"
+        },
+        {
+          "test": "Backup restore preserves highlighted line and paused timing",
+          "result": "PASS"
+        },
+        {
+          "test": "Repeated fast polls keep the same highlighted DOM node",
+          "result": "PASS"
+        },
+        {
+          "test": "Repeated fast polls preserve the line number",
+          "result": "PASS"
+        },
+        {
+          "test": "Fast confirmed slide change uses cached notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Fast slide changes do not stop timing",
+          "result": "PASS"
+        },
+        {
+          "test": "Fast return restores the previous line",
+          "result": "PASS"
+        },
+        {
+          "test": "Requested slide does not optimistically change notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Timer continues during PowerPoint verification",
+          "result": "PASS"
+        },
+        {
+          "test": "Busy reader does not send a duplicate slide shortcut",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmation unblocks slide controls",
+          "result": "PASS"
+        },
+        {
+          "test": "Different slide ID never reuses another slide\u2019s notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Full notes read replaces pending placeholder",
+          "result": "PASS"
+        },
+        {
+          "test": "Unlink leaves elapsed timer running until paused",
+          "result": "PASS"
+        },
+        {
+          "test": "Native timer checkpoint uses dedicated small messages",
+          "result": "PASS"
+        },
+        {
+          "test": "Native saved timer restores paused with HH:MM:SS",
+          "result": "PASS"
+        },
+        {
+          "test": "Invalid saved time is clamped safely",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes above preview and timer at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Current line anchored near reading top at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Usable notes height at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes above preview and timer at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "Current line anchored near reading top at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "Usable notes height at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes above preview and timer at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Current line anchored near reading top at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Usable notes height at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes above preview and timer at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "Current line anchored near reading top at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "Usable notes height at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes above preview and timer at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Current line anchored near reading top at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Usable notes height at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Compact keeps notes above preview",
+          "result": "PASS"
+        },
+        {
+          "test": "Last line also aligns at top, not the bottom",
+          "result": "PASS"
+        },
+        {
+          "test": "Hiding preview does not hide timer or clock",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript exceptions",
+          "result": "PASS"
+        },
+        {
+          "test": "No external requests",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_reset_all_lines",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 6.93,
+      "log": "test_reset_all_lines.log",
+      "checks": [
+        {
+          "test": "Starts on slide 2, line 4 with positions on other slides",
+          "result": "PASS"
+        },
+        {
+          "test": "New reset button visible below line controls",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmation identifies all three slides",
+          "result": "PASS"
+        },
+        {
+          "test": "Cancel initially focused to avoid accidental reset",
+          "result": "PASS"
+        },
+        {
+          "test": "Line/slide keys do not navigate behind confirmation",
+          "result": "PASS"
+        },
+        {
+          "test": "Cancel preserves all positions",
+          "result": "PASS"
+        },
+        {
+          "test": "Escape closes without reset",
+          "result": "PASS"
+        },
+        {
+          "test": "Existing single-slide button still leaves other slides alone",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmed reset keeps current slide and highlights line 1",
+          "result": "PASS"
+        },
+        {
+          "test": "All slides, not only the visible one, are zeroed",
+          "result": "PASS"
+        },
+        {
+          "test": "Stale IDs are discarded",
+          "result": "PASS"
+        },
+        {
+          "test": "Paused total and per-slide timing unchanged",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes and all snapshot data unchanged",
+          "result": "PASS"
+        },
+        {
+          "test": "Current image unchanged",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmation returns focus to notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Accessible confirmation feedback is shown",
+          "result": "PASS"
+        },
+        {
+          "test": "Persisted current and other slide positions are reset",
+          "result": "PASS"
+        },
+        {
+          "test": "Previous slide returns to first line",
+          "result": "PASS"
+        },
+        {
+          "test": "Forward slide also returns to first line",
+          "result": "PASS"
+        },
+        {
+          "test": "Normal per-slide memory resumes after reset",
+          "result": "PASS"
+        },
+        {
+          "test": "Reopening restored state keeps every reset position",
+          "result": "PASS"
+        },
+        {
+          "test": "JSON backup includes reset positions",
+          "result": "PASS"
+        },
+        {
+          "test": "Running timer is not paused or reset",
+          "result": "PASS"
+        },
+        {
+          "test": "Number-keyed manual scripts reset all positions",
+          "result": "PASS"
+        },
+        {
+          "test": "Empty-note slide stays empty without fabricated line",
+          "result": "PASS"
+        },
+        {
+          "test": "Other slides reset when current slide has no notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Single-slide presentation is handled",
+          "result": "PASS"
+        },
+        {
+          "test": "Linked reset keeps current slide, connection and key mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Linked reset emits no PowerPoint navigation or unlink commands",
+          "result": "PASS"
+        },
+        {
+          "test": "Linked reset persists all positions through native saveState",
+          "result": "PASS"
+        },
+        {
+          "test": "Native interaction reports modal to suspend line capture",
+          "result": "PASS"
+        },
+        {
+          "test": "Full notes refresh and sparse return do not restore old positions",
+          "result": "PASS"
+        },
+        {
+          "test": "Previously unvisited linked slide starts at line 1",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset unavailable while a native transaction is busy",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmation cannot reset during an in-progress transaction",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmation succeeds when operation finishes",
+          "result": "PASS"
+        },
+        {
+          "test": "Changed deck is not reset under stale confirmation",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes remain above reset and preview at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset can be opened and cancelled at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes remain above reset and preview at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset can be opened and cancelled at 920",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes remain above reset and preview at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset can be opened and cancelled at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes remain above reset and preview at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset can be opened and cancelled at 520",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes remain above reset and preview at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Reset can be opened and cancelled at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Compact mode retains reset button",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript exceptions",
+          "result": "PASS"
+        },
+        {
+          "test": "No external requests",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_reader",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 5.37,
+      "log": "test_reader.log",
+      "checks": [
+        {
+          "test": "Offline render: four example slides and one current line",
+          "result": "PASS"
+        },
+        {
+          "test": "Browser has no live PowerPoint controls",
+          "result": "PASS"
+        },
+        {
+          "test": "Down moves exactly one line, not slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Up moves one line backwards",
+          "result": "PASS"
+        },
+        {
+          "test": "Up stops at first line",
+          "result": "PASS"
+        },
+        {
+          "test": "Down at final line never changes slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Right moves to next script slide, line 1",
+          "result": "PASS"
+        },
+        {
+          "test": "Left restores the previous slide saved line",
+          "result": "PASS"
+        },
+        {
+          "test": "Left stops at first slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Page Down restores next slide position",
+          "result": "PASS"
+        },
+        {
+          "test": "Held-arrow repeat is suppressed",
+          "result": "PASS"
+        },
+        {
+          "test": "Editor arrow keys do not navigate reader",
+          "result": "PASS"
+        },
+        {
+          "test": "Duplicate script slide numbers rejected",
+          "result": "PASS"
+        },
+        {
+          "test": "PPTX notes imported in deck order",
+          "result": "PASS"
+        },
+        {
+          "test": "Imported total includes a slide without notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Blank notes slide stays in place and has no line highlight",
+          "result": "PASS"
+        },
+        {
+          "test": "Unicode and XML-looking notes are safe text",
+          "result": "PASS"
+        },
+        {
+          "test": "Right stops at last slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Snapshot autosave retains slide, line and structured notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Backup includes Unicode notes and line position",
+          "result": "PASS"
+        },
+        {
+          "test": "Structured backup restores reader position",
+          "result": "PASS"
+        },
+        {
+          "test": "Native bridge announces readiness",
+          "result": "PASS"
+        },
+        {
+          "test": "Live deck replaces unrelated example script with actual notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Slide counter shows current and total from native state",
+          "result": "PASS"
+        },
+        {
+          "test": "Live Down only highlights a line, no PowerPoint command",
+          "result": "PASS"
+        },
+        {
+          "test": "Unchanged live poll keeps highlighted sentence and DOM node",
+          "result": "PASS"
+        },
+        {
+          "test": "Right sends one next-slide request without optimistic slide change",
+          "result": "PASS"
+        },
+        {
+          "test": "Line movement pauses during slide navigation",
+          "result": "PASS"
+        },
+        {
+          "test": "Actual slide change resets highlight and clears notes for blank slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Left sends previous-slide command",
+          "result": "PASS"
+        },
+        {
+          "test": "Live carriage returns and soft breaks split into three lines",
+          "result": "PASS"
+        },
+        {
+          "test": "Edited live notes preserve the highlighted sentence when found",
+          "result": "PASS"
+        },
+        {
+          "test": "Live Down at last line never requests next slide",
+          "result": "PASS"
+        },
+        {
+          "test": "A different slide ID at the same index resets highlight",
+          "result": "PASS"
+        },
+        {
+          "test": "Changed total creates missing slide and follows it",
+          "result": "PASS"
+        },
+        {
+          "test": "Last live slide disables forward slide button",
+          "result": "PASS"
+        },
+        {
+          "test": "Reduced total removes excess slides",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes-read failure clears text rather than showing stale script",
+          "result": "PASS"
+        },
+        {
+          "test": "Heading-like notes do not create phantom slides",
+          "result": "PASS"
+        },
+        {
+          "test": "Live notes are text, not executable HTML",
+          "result": "PASS"
+        },
+        {
+          "test": "Successful notes update clears earlier failure notice",
+          "result": "PASS"
+        },
+        {
+          "test": "Refresh asks native app to reread all notes",
+          "result": "PASS"
+        },
+        {
+          "test": "Successful update clears transient reading notice",
+          "result": "PASS"
+        },
+        {
+          "test": "Presentation-key capture requires explicit native opt-in",
+          "result": "PASS"
+        },
+        {
+          "test": "UI accurately shows enabled native arrow mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Escape requests release of global arrow keys",
+          "result": "PASS"
+        },
+        {
+          "test": "Native is told to suspend controls while help is open",
+          "result": "PASS"
+        },
+        {
+          "test": "Disconnect visibly restores snapshot mode and turns capture off",
+          "result": "PASS"
+        },
+        {
+          "test": "Live heading-like notes survive round trip through manual editor",
+          "result": "PASS"
+        },
+        {
+          "test": "Mismatched notes packet is rejected and requests unlink",
+          "result": "PASS"
+        },
+        {
+          "test": "Repeated identical speaking lines keep their exact position on polling",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 1180\u00d7850",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader has visible height at 1180\u00d7850",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 660\u00d7600",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader has visible height at 660\u00d7600",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 390\u00d7844",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader has visible height at 390\u00d7844",
+          "result": "PASS"
+        },
+        {
+          "test": "Exactly one live line stays highlighted",
+          "result": "PASS"
+        },
+        {
+          "test": "Actual file-URL launch and real file-origin storage",
+          "result": "NOT RUN",
+          "reason": "This test environment blocks file URLs by policy. No policy bypass attempted."
+        },
+        {
+          "test": "No external network requests",
+          "result": "PASS"
+        },
+        {
+          "test": "No browser JavaScript errors",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_keyboard_recovery",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.66,
+      "log": "test_keyboard_recovery.log",
+      "checks": [
+        {
+          "test": "Rejected direct command keeps notes linked",
+          "result": "PASS"
+        },
+        {
+          "test": "Rejected direct command does not disable an enabled line-key mode",
+          "result": "PASS"
+        },
+        {
+          "test": "PowerPoint keys toggle remains usable in follow-only mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Unsafe direct slide buttons are still paused",
+          "result": "PASS"
+        },
+        {
+          "test": "Error retains original reason and describes recovery",
+          "result": "PASS"
+        },
+        {
+          "test": "Down still advances highlighted line after direct command fails",
+          "result": "PASS"
+        },
+        {
+          "test": "Down at final line does not change slide",
+          "result": "PASS"
+        },
+        {
+          "test": "A real slide-status change restores the earlier highlighted line",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader-focused Right does not retry rejected slide adapter",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader-focused warning explains PowerPoint must have focus",
+          "result": "PASS"
+        },
+        {
+          "test": "Line-key mode can be requested after direct failure",
+          "result": "PASS"
+        },
+        {
+          "test": "User can switch capture off even while notes are busy",
+          "result": "PASS"
+        },
+        {
+          "test": "Open reader help blocks native line movement",
+          "result": "PASS"
+        },
+        {
+          "test": "Escape requests line capture release",
+          "result": "PASS"
+        },
+        {
+          "test": "Unlink releases capture and disables its toggle",
+          "result": "PASS"
+        },
+        {
+          "test": "UI shows version 0.5",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript exceptions",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_slide_buttons",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.84,
+      "log": "test_slide_buttons.log",
+      "checks": [
+        {
+          "test": "Version is visible in the reader",
+          "result": "PASS"
+        },
+        {
+          "test": "Window setup cannot be used before linking",
+          "result": "PASS"
+        },
+        {
+          "test": "Live link offers a slideshow-window setup button",
+          "result": "PASS"
+        },
+        {
+          "test": "Setup sends a dedicated configuration request",
+          "result": "PASS"
+        },
+        {
+          "test": "Setup does not change the reader slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Ready state is distinct from confirmed navigation",
+          "result": "PASS"
+        },
+        {
+          "test": "Down still changes only the line",
+          "result": "PASS"
+        },
+        {
+          "test": "Down stops at last line without changing slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Next button sends exactly a next slide request",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader does not optimistically advance before confirmation",
+          "result": "PASS"
+        },
+        {
+          "test": "Duplicate button press is disabled during verification",
+          "result": "PASS"
+        },
+        {
+          "test": "Unconfirmed request preserves notes and current line",
+          "result": "PASS"
+        },
+        {
+          "test": "Unconfirmed request does not permanently lock buttons",
+          "result": "PASS"
+        },
+        {
+          "test": "Failure is visible to presenter",
+          "result": "PASS"
+        },
+        {
+          "test": "UI does not automatically resend failed navigation",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmed next slide loads actual notes at first line",
+          "result": "PASS"
+        },
+        {
+          "test": "Reader-focused Left requests previous slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Returning after accidental change restores saved highlight",
+          "result": "PASS"
+        },
+        {
+          "test": "Focus refusal keeps the notes connection and configuration button usable",
+          "result": "PASS"
+        },
+        {
+          "test": "Slide-button refusal does not disable independent line-key mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Legacy rejected-command status is recognised",
+          "result": "PASS"
+        },
+        {
+          "test": "New keyboard result recovers legacy-disabled controls without relinking",
+          "result": "PASS"
+        },
+        {
+          "test": "Recovery updates the live-status label as well as buttons",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock visible at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes retain usable height at 1180",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock visible at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes retain usable height at 660",
+          "result": "PASS"
+        },
+        {
+          "test": "No horizontal overflow at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock visible at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Notes retain usable height at 390",
+          "result": "PASS"
+        },
+        {
+          "test": "Unlink forgets session-only window setup",
+          "result": "PASS"
+        },
+        {
+          "test": "Unlink releases captured keys",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript exceptions",
+          "result": "PASS"
+        },
+        {
+          "test": "No external network requests",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "test_preview_clock_memory",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 12.43,
+      "log": "test_preview_clock_memory.log",
+      "checks": [
+        {
+          "test": "Clock displays seconds in 24-hour mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock advances without changing the slide or line",
+          "result": "PASS"
+        },
+        {
+          "test": "Click switches clock to 12-hour mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Click restores 24-hour mode",
+          "result": "PASS"
+        },
+        {
+          "test": "PowerPoint import retains stable slide IDs",
+          "result": "PASS"
+        },
+        {
+          "test": "Seven supplied lesson sentences are speaker-note lines",
+          "result": "PASS"
+        },
+        {
+          "test": "Accidental next slide then back restores line 4 on lesson slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Forward navigation also restores that slide\u2019s line 2",
+          "result": "PASS"
+        },
+        {
+          "test": "Restart button resets only the current slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Other slides keep their positions after current-slide restart",
+          "result": "PASS"
+        },
+        {
+          "test": "Wrong image count is rejected before mapping",
+          "result": "PASS"
+        },
+        {
+          "test": "Unordered image selection maps by slide numbers",
+          "result": "PASS"
+        },
+        {
+          "test": "Images are not applied before explicit confirmation",
+          "result": "PASS"
+        },
+        {
+          "test": "Arrow keys do not move script while mapping dialog is open",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmed image set appears on current slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview changes with the selected slide",
+          "result": "PASS"
+        },
+        {
+          "test": "Returning restores both preview image and highlighted line",
+          "result": "PASS"
+        },
+        {
+          "test": "Slide preview can be enlarged",
+          "result": "PASS"
+        },
+        {
+          "test": "Large preview dialog prevents accidental slide jumps",
+          "result": "PASS"
+        },
+        {
+          "test": "P hides preview without changing line",
+          "result": "PASS"
+        },
+        {
+          "test": "P restores preview and image",
+          "result": "PASS"
+        },
+        {
+          "test": "Backup includes images and independent per-slide positions",
+          "result": "PASS"
+        },
+        {
+          "test": "Restored backup retains image, current slide and current line",
+          "result": "PASS"
+        },
+        {
+          "test": "Restored backup retains other slide\u2019s saved line",
+          "result": "PASS"
+        },
+        {
+          "test": "ZIP of exported slides ignores Mac metadata",
+          "result": "PASS"
+        },
+        {
+          "test": "Corrupt image does not replace working previews",
+          "result": "PASS"
+        },
+        {
+          "test": "Storage quota fallback retains notes and position instead of losing everything",
+          "result": "PASS"
+        },
+        {
+          "test": "Storage quota fallback reports image backup is needed",
+          "result": "PASS"
+        },
+        {
+          "test": "Right requests native navigation without optimistic preview change",
+          "result": "PASS"
+        },
+        {
+          "test": "Confirmed native slide changes restore previous highlighted line and image",
+          "result": "PASS"
+        },
+        {
+          "test": "Unchanged live poll preserves preview and highlighted DOM node",
+          "result": "PASS"
+        },
+        {
+          "test": "Edited live notes relocate the remembered sentence",
+          "result": "PASS"
+        },
+        {
+          "test": "Revisiting updated slide retains its adjusted line position",
+          "result": "PASS"
+        },
+        {
+          "test": "Reordered slide keeps its line and image via stable slide ID",
+          "result": "PASS"
+        },
+        {
+          "test": "Temporary notes failure does not erase the saved line",
+          "result": "PASS"
+        },
+        {
+          "test": "Unlink labels previews as script-selected, not live",
+          "result": "PASS"
+        },
+        {
+          "test": "Relinking same presentation retains line positions and previews",
+          "result": "PASS"
+        },
+        {
+          "test": "Navigation failure packet keeps valid note following but disables slide commands",
+          "result": "PASS"
+        },
+        {
+          "test": "Follow-only fallback is clearly labelled",
+          "result": "PASS"
+        },
+        {
+          "test": "PowerPoint changes still update preview in follow-only mode",
+          "result": "PASS"
+        },
+        {
+          "test": "Different deck does not inherit positions or images despite reused slide IDs",
+          "result": "PASS"
+        },
+        {
+          "test": "Image mapping dialog tells native app to suspend captured keys",
+          "result": "PASS"
+        },
+        {
+          "test": "Native line events are ignored during image mapping",
+          "result": "PASS"
+        },
+        {
+          "test": "Backup validation rejects external and SVG image payloads",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview layout has no horizontal overflow at 1180x850",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock remains visible at 1180x850",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview layout has no horizontal overflow at 920x700",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock remains visible at 920x700",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview layout has no horizontal overflow at 660x540",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock remains visible at 660x540",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview layout has no horizontal overflow at 520x700",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock remains visible at 520x700",
+          "result": "PASS"
+        },
+        {
+          "test": "Preview layout has no horizontal overflow at 390x844",
+          "result": "PASS"
+        },
+        {
+          "test": "Clock remains visible at 390x844",
+          "result": "PASS"
+        },
+        {
+          "test": "No external network requests during preview, ZIP import, clock or syncing tests",
+          "result": "PASS"
+        },
+        {
+          "test": "No JavaScript errors during new-feature tests",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "KeyPolicyTests-compile",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.79,
+      "log": "KeyPolicyTests-compile.log"
+    },
+    {
+      "suite": "KeyPolicyTests",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.0,
+      "log": "KeyPolicyTests.log"
+    },
+    {
+      "suite": "SlideNavigationPolicyTests-compile",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.37,
+      "log": "SlideNavigationPolicyTests-compile.log"
+    },
+    {
+      "suite": "SlideNavigationPolicyTests",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.01,
+      "log": "SlideNavigationPolicyTests.log"
+    },
+    {
+      "suite": "PositionParserTests-compile",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.41,
+      "log": "PositionParserTests-compile.log"
+    },
+    {
+      "suite": "PositionParserTests",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.02,
+      "log": "PositionParserTests.log"
+    },
+    {
+      "suite": "test_window_placement",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.9,
+      "log": "test_window_placement.log"
+    },
+    {
+      "suite": "builder-syntax",
+      "result": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.0,
+      "log": "builder-syntax.log"
+    }
+  ]
+}

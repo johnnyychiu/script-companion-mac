@@ -1,0 +1,253 @@
+{
+  "environment": "Offline Linux Chromium; virtual clock; mocked storage and native transport; not macOS or PowerPoint",
+  "checks": [
+    {
+      "test": "No slide heading remains inside the notes area",
+      "result": "PASS"
+    },
+    {
+      "test": "Slide heading is beside the snapshot in the lower session panel",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes area starts at the first content pixel",
+      "result": "PASS"
+    },
+    {
+      "test": "Restored highlighted line starts 4 pixels from content top",
+      "result": "PASS"
+    },
+    {
+      "test": "Full slide title remains in a hover tooltip",
+      "result": "PASS"
+    },
+    {
+      "test": "Accidental slide change restores the line and preview",
+      "result": "PASS"
+    },
+    {
+      "test": "Returning line keeps the 4-pixel top inset",
+      "result": "PASS"
+    },
+    {
+      "test": "Next line is also aligned at 4 pixels",
+      "result": "PASS"
+    },
+    {
+      "test": "First line has no extra blank spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "Last line can reach the same top position",
+      "result": "PASS"
+    },
+    {
+      "test": "Presentation timer still counts",
+      "result": "PASS"
+    },
+    {
+      "test": "Hidden snapshot does not hide the relocated slide identity",
+      "result": "PASS"
+    },
+    {
+      "test": "Showing the snapshot does not move notes downward",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset-all leaves a running timer untouched",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset-all returns current line to top without changing the slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset-all still resets other slides too",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 normal: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 normal: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 normal: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 normal: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 compact: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 compact: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 compact: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "1180x760 compact: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 normal: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 normal: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 normal: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 normal: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 compact: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 compact: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 compact: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "920x700 compact: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 normal: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 normal: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 normal: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 normal: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 compact: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 compact: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 compact: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "660x540 compact: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 normal: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 normal: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 normal: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 normal: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 compact: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 compact: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 compact: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "520x700 compact: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 normal: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 normal: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 normal: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 normal: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 compact: notes have no top header or spacer",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 compact: metadata below notes and above timer",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 compact: no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "test": "390x844 compact: reader retains at least 160 pixels height",
+      "result": "PASS"
+    },
+    {
+      "test": "Opening setup and increasing text retain top alignment",
+      "result": "PASS"
+    },
+    {
+      "test": "Live slide packet updates the relocated title and count",
+      "result": "PASS"
+    },
+    {
+      "test": "Live return restores line memory at the upper edge",
+      "result": "PASS"
+    },
+    {
+      "test": "Line movement sends no PowerPoint slide request",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript exceptions",
+      "result": "PASS"
+    },
+    {
+      "test": "No external requests",
+      "result": "PASS"
+    }
+  ]
+}

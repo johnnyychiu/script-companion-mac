@@ -1,0 +1,56 @@
+PASS Starts on slide 2, line 4 with positions on other slides
+PASS New reset button visible below line controls
+PASS Confirmation identifies all three slides
+PASS Cancel initially focused to avoid accidental reset
+PASS Line/slide keys do not navigate behind confirmation
+PASS Cancel preserves all positions
+PASS Escape closes without reset
+PASS Existing single-slide button still leaves other slides alone
+PASS Confirmed reset keeps current slide and highlights line 1
+PASS All slides, not only the visible one, are zeroed
+PASS Stale IDs are discarded
+PASS Paused total and per-slide timing unchanged
+PASS Notes and all snapshot data unchanged
+PASS Current image unchanged
+PASS Confirmation returns focus to notes
+PASS Accessible confirmation feedback is shown
+PASS Persisted current and other slide positions are reset
+PASS Previous slide returns to first line
+PASS Forward slide also returns to first line
+PASS Normal per-slide memory resumes after reset
+PASS Reopening restored state keeps every reset position
+PASS JSON backup includes reset positions
+PASS Running timer is not paused or reset
+PASS Number-keyed manual scripts reset all positions
+PASS Empty-note slide stays empty without fabricated line
+PASS Other slides reset when current slide has no notes
+PASS Single-slide presentation is handled
+PASS Linked reset keeps current slide, connection and key mode
+PASS Linked reset emits no PowerPoint navigation or unlink commands
+PASS Linked reset persists all positions through native saveState
+PASS Native interaction reports modal to suspend line capture
+PASS Full notes refresh and sparse return do not restore old positions
+PASS Previously unvisited linked slide starts at line 1
+PASS Reset unavailable while a native transaction is busy
+PASS Confirmation cannot reset during an in-progress transaction
+PASS Confirmation succeeds when operation finishes
+PASS Changed deck is not reset under stale confirmation
+PASS No horizontal overflow at 1180
+PASS Notes remain above reset and preview at 1180
+PASS Reset can be opened and cancelled at 1180
+PASS No horizontal overflow at 920
+PASS Notes remain above reset and preview at 920
+PASS Reset can be opened and cancelled at 920
+PASS No horizontal overflow at 660
+PASS Notes remain above reset and preview at 660
+PASS Reset can be opened and cancelled at 660
+PASS No horizontal overflow at 520
+PASS Notes remain above reset and preview at 520
+PASS Reset can be opened and cancelled at 520
+PASS No horizontal overflow at 390
+PASS Notes remain above reset and preview at 390
+PASS Reset can be opened and cancelled at 390
+PASS Compact mode retains reset button
+PASS No JavaScript exceptions
+PASS No external requests
+55 reset-all checks passed.

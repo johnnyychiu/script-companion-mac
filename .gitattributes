@@ -1,0 +1,11 @@
+* text=auto
+*.html text eol=lf
+*.swift text eol=lf
+*.applescript text eol=lf
+*.py text eol=lf
+*.command text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.png binary
+*.pptx binary

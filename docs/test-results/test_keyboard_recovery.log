@@ -1,0 +1,18 @@
+PASS Rejected direct command keeps notes linked
+PASS Rejected direct command does not disable an enabled line-key mode
+PASS PowerPoint keys toggle remains usable in follow-only mode
+PASS Unsafe direct slide buttons are still paused
+PASS Error retains original reason and describes recovery
+PASS Down still advances highlighted line after direct command fails
+PASS Down at final line does not change slide
+PASS A real slide-status change restores the earlier highlighted line
+PASS Reader-focused Right does not retry rejected slide adapter
+PASS Reader-focused warning explains PowerPoint must have focus
+PASS Line-key mode can be requested after direct failure
+PASS User can switch capture off even while notes are busy
+PASS Open reader help blocks native line movement
+PASS Escape requests line capture release
+PASS Unlink releases capture and disables its toggle
+PASS UI shows version 0.5
+PASS No JavaScript exceptions
+17 recovery checks passed.

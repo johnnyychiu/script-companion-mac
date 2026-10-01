@@ -1,0 +1,61 @@
+PASS Timer opens ready and at zero
+PASS Clock and elapsed timer are separate
+PASS Start counts elapsed time
+PASS Large display uses hours minutes seconds
+PASS Slide changes do not reset total timer
+PASS Current slide has its own time
+PASS Return restores the highlighted line
+PASS Return adds to that slide’s earlier time
+PASS Pause excludes paused time
+PASS Paused UI offers Resume
+PASS T toggles timer without changing line
+PASS Cancel reset preserves elapsed time
+PASS Reset clears total and per-slide time
+PASS Reset does not reset the highlighted line
+PASS Typing T in the editor does not run the timer
+PASS Running timer checkpoints separately from notes
+PASS Reopened browser state restores the elapsed value paused
+PASS Closed/paused reader time is not added on restore
+PASS Backup includes elapsed time and per-slide times
+PASS Backup restore preserves highlighted line and paused timing
+PASS Repeated fast polls keep the same highlighted DOM node
+PASS Repeated fast polls preserve the line number
+PASS Fast confirmed slide change uses cached notes
+PASS Fast slide changes do not stop timing
+PASS Fast return restores the previous line
+PASS Requested slide does not optimistically change notes
+PASS Timer continues during PowerPoint verification
+PASS Busy reader does not send a duplicate slide shortcut
+PASS Confirmation unblocks slide controls
+PASS Different slide ID never reuses another slide’s notes
+PASS Full notes read replaces pending placeholder
+PASS Unlink leaves elapsed timer running until paused
+PASS Native timer checkpoint uses dedicated small messages
+PASS Native saved timer restores paused with HH:MM:SS
+PASS Invalid saved time is clamped safely
+PASS Notes above preview and timer at 1180
+PASS Current line anchored near reading top at 1180
+PASS Usable notes height at 1180
+PASS No horizontal overflow at 1180
+PASS Notes above preview and timer at 920
+PASS Current line anchored near reading top at 920
+PASS Usable notes height at 920
+PASS No horizontal overflow at 920
+PASS Notes above preview and timer at 660
+PASS Current line anchored near reading top at 660
+PASS Usable notes height at 660
+PASS No horizontal overflow at 660
+PASS Notes above preview and timer at 520
+PASS Current line anchored near reading top at 520
+PASS Usable notes height at 520
+PASS No horizontal overflow at 520
+PASS Notes above preview and timer at 390
+PASS Current line anchored near reading top at 390
+PASS Usable notes height at 390
+PASS No horizontal overflow at 390
+PASS Compact keeps notes above preview
+PASS Last line also aligns at top, not the bottom
+PASS Hiding preview does not hide timer or clock
+PASS No JavaScript exceptions
+PASS No external requests
+60 notes-first/timer/sparse-protocol checks passed.

@@ -1,0 +1,57 @@
+PASS Clock displays seconds in 24-hour mode
+PASS Clock advances without changing the slide or line
+PASS Click switches clock to 12-hour mode
+PASS Click restores 24-hour mode
+PASS PowerPoint import retains stable slide IDs
+PASS Seven supplied lesson sentences are speaker-note lines
+PASS Accidental next slide then back restores line 4 on lesson slide
+PASS Forward navigation also restores that slide’s line 2
+PASS Restart button resets only the current slide
+PASS Other slides keep their positions after current-slide restart
+PASS Wrong image count is rejected before mapping
+PASS Unordered image selection maps by slide numbers
+PASS Images are not applied before explicit confirmation
+PASS Arrow keys do not move script while mapping dialog is open
+PASS Confirmed image set appears on current slide
+PASS Preview changes with the selected slide
+PASS Returning restores both preview image and highlighted line
+PASS Slide preview can be enlarged
+PASS Large preview dialog prevents accidental slide jumps
+PASS P hides preview without changing line
+PASS P restores preview and image
+PASS Backup includes images and independent per-slide positions
+PASS Restored backup retains image, current slide and current line
+PASS Restored backup retains other slide’s saved line
+PASS ZIP of exported slides ignores Mac metadata
+PASS Corrupt image does not replace working previews
+PASS Storage quota fallback retains notes and position instead of losing everything
+PASS Storage quota fallback reports image backup is needed
+PASS Right requests native navigation without optimistic preview change
+PASS Confirmed native slide changes restore previous highlighted line and image
+PASS Unchanged live poll preserves preview and highlighted DOM node
+PASS Edited live notes relocate the remembered sentence
+PASS Revisiting updated slide retains its adjusted line position
+PASS Reordered slide keeps its line and image via stable slide ID
+PASS Temporary notes failure does not erase the saved line
+PASS Unlink labels previews as script-selected, not live
+PASS Relinking same presentation retains line positions and previews
+PASS Navigation failure packet keeps valid note following but disables slide commands
+PASS Follow-only fallback is clearly labelled
+PASS PowerPoint changes still update preview in follow-only mode
+PASS Different deck does not inherit positions or images despite reused slide IDs
+PASS Image mapping dialog tells native app to suspend captured keys
+PASS Native line events are ignored during image mapping
+PASS Backup validation rejects external and SVG image payloads
+PASS Preview layout has no horizontal overflow at 1180x850
+PASS Clock remains visible at 1180x850
+PASS Preview layout has no horizontal overflow at 920x700
+PASS Clock remains visible at 920x700
+PASS Preview layout has no horizontal overflow at 660x540
+PASS Clock remains visible at 660x540
+PASS Preview layout has no horizontal overflow at 520x700
+PASS Clock remains visible at 520x700
+PASS Preview layout has no horizontal overflow at 390x844
+PASS Clock remains visible at 390x844
+PASS No external network requests during preview, ZIP import, clock or syncing tests
+PASS No JavaScript errors during new-feature tests
+56 new-feature checks passed. Actual macOS build and PowerPoint integration are not tested here.

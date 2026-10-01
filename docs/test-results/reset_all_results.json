@@ -1,0 +1,225 @@
+{
+  "environment": "Offline Linux Chromium; mocked storage; virtual time; native packets simulated",
+  "checks": [
+    {
+      "test": "Starts on slide 2, line 4 with positions on other slides",
+      "result": "PASS"
+    },
+    {
+      "test": "New reset button visible below line controls",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmation identifies all three slides",
+      "result": "PASS"
+    },
+    {
+      "test": "Cancel initially focused to avoid accidental reset",
+      "result": "PASS"
+    },
+    {
+      "test": "Line/slide keys do not navigate behind confirmation",
+      "result": "PASS"
+    },
+    {
+      "test": "Cancel preserves all positions",
+      "result": "PASS"
+    },
+    {
+      "test": "Escape closes without reset",
+      "result": "PASS"
+    },
+    {
+      "test": "Existing single-slide button still leaves other slides alone",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmed reset keeps current slide and highlights line 1",
+      "result": "PASS"
+    },
+    {
+      "test": "All slides, not only the visible one, are zeroed",
+      "result": "PASS"
+    },
+    {
+      "test": "Stale IDs are discarded",
+      "result": "PASS"
+    },
+    {
+      "test": "Paused total and per-slide timing unchanged",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes and all snapshot data unchanged",
+      "result": "PASS"
+    },
+    {
+      "test": "Current image unchanged",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmation returns focus to notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Accessible confirmation feedback is shown",
+      "result": "PASS"
+    },
+    {
+      "test": "Persisted current and other slide positions are reset",
+      "result": "PASS"
+    },
+    {
+      "test": "Previous slide returns to first line",
+      "result": "PASS"
+    },
+    {
+      "test": "Forward slide also returns to first line",
+      "result": "PASS"
+    },
+    {
+      "test": "Normal per-slide memory resumes after reset",
+      "result": "PASS"
+    },
+    {
+      "test": "Reopening restored state keeps every reset position",
+      "result": "PASS"
+    },
+    {
+      "test": "JSON backup includes reset positions",
+      "result": "PASS"
+    },
+    {
+      "test": "Running timer is not paused or reset",
+      "result": "PASS"
+    },
+    {
+      "test": "Number-keyed manual scripts reset all positions",
+      "result": "PASS"
+    },
+    {
+      "test": "Empty-note slide stays empty without fabricated line",
+      "result": "PASS"
+    },
+    {
+      "test": "Other slides reset when current slide has no notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Single-slide presentation is handled",
+      "result": "PASS"
+    },
+    {
+      "test": "Linked reset keeps current slide, connection and key mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Linked reset emits no PowerPoint navigation or unlink commands",
+      "result": "PASS"
+    },
+    {
+      "test": "Linked reset persists all positions through native saveState",
+      "result": "PASS"
+    },
+    {
+      "test": "Native interaction reports modal to suspend line capture",
+      "result": "PASS"
+    },
+    {
+      "test": "Full notes refresh and sparse return do not restore old positions",
+      "result": "PASS"
+    },
+    {
+      "test": "Previously unvisited linked slide starts at line 1",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset unavailable while a native transaction is busy",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmation cannot reset during an in-progress transaction",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmation succeeds when operation finishes",
+      "result": "PASS"
+    },
+    {
+      "test": "Changed deck is not reset under stale confirmation",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes remain above reset and preview at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset can be opened and cancelled at 1180",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes remain above reset and preview at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset can be opened and cancelled at 920",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes remain above reset and preview at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset can be opened and cancelled at 660",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes remain above reset and preview at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset can be opened and cancelled at 520",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes remain above reset and preview at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Reset can be opened and cancelled at 390",
+      "result": "PASS"
+    },
+    {
+      "test": "Compact mode retains reset button",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript exceptions",
+      "result": "PASS"
+    },
+    {
+      "test": "No external requests",
+      "result": "PASS"
+    }
+  ]
+}

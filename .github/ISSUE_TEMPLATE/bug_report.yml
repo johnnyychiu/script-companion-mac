@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible issue using non-sensitive sample data.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach real speaker notes, confidential slides, credentials or unredacted diagnostic paths. Browser tests do not verify native PowerPoint control."
+  - type: input
+    id: version
+    attributes:
+      label: Script Companion version
+      placeholder: "0.5.3"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: "macOS, PowerPoint and browser versions; native app or HTML reader; projector/extended displays; which app had focus."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce with sample data
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted error text or sample screenshot
+      description: "Review paths, presentation/window names and note content before sharing."

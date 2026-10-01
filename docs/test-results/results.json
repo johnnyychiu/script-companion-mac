@@ -1,0 +1,250 @@
+{
+  "environment": "Linux Chromium; simulated native transport, not PowerPoint",
+  "checks": [
+    {
+      "test": "Offline render: four example slides and one current line",
+      "result": "PASS"
+    },
+    {
+      "test": "Browser has no live PowerPoint controls",
+      "result": "PASS"
+    },
+    {
+      "test": "Down moves exactly one line, not slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Up moves one line backwards",
+      "result": "PASS"
+    },
+    {
+      "test": "Up stops at first line",
+      "result": "PASS"
+    },
+    {
+      "test": "Down at final line never changes slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Right moves to next script slide, line 1",
+      "result": "PASS"
+    },
+    {
+      "test": "Left restores the previous slide saved line",
+      "result": "PASS"
+    },
+    {
+      "test": "Left stops at first slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Page Down restores next slide position",
+      "result": "PASS"
+    },
+    {
+      "test": "Held-arrow repeat is suppressed",
+      "result": "PASS"
+    },
+    {
+      "test": "Editor arrow keys do not navigate reader",
+      "result": "PASS"
+    },
+    {
+      "test": "Duplicate script slide numbers rejected",
+      "result": "PASS"
+    },
+    {
+      "test": "PPTX notes imported in deck order",
+      "result": "PASS"
+    },
+    {
+      "test": "Imported total includes a slide without notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Blank notes slide stays in place and has no line highlight",
+      "result": "PASS"
+    },
+    {
+      "test": "Unicode and XML-looking notes are safe text",
+      "result": "PASS"
+    },
+    {
+      "test": "Right stops at last slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Snapshot autosave retains slide, line and structured notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Backup includes Unicode notes and line position",
+      "result": "PASS"
+    },
+    {
+      "test": "Structured backup restores reader position",
+      "result": "PASS"
+    },
+    {
+      "test": "Native bridge announces readiness",
+      "result": "PASS"
+    },
+    {
+      "test": "Live deck replaces unrelated example script with actual notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Slide counter shows current and total from native state",
+      "result": "PASS"
+    },
+    {
+      "test": "Live Down only highlights a line, no PowerPoint command",
+      "result": "PASS"
+    },
+    {
+      "test": "Unchanged live poll keeps highlighted sentence and DOM node",
+      "result": "PASS"
+    },
+    {
+      "test": "Right sends one next-slide request without optimistic slide change",
+      "result": "PASS"
+    },
+    {
+      "test": "Line movement pauses during slide navigation",
+      "result": "PASS"
+    },
+    {
+      "test": "Actual slide change resets highlight and clears notes for blank slide",
+      "result": "PASS"
+    },
+    {
+      "test": "Left sends previous-slide command",
+      "result": "PASS"
+    },
+    {
+      "test": "Live carriage returns and soft breaks split into three lines",
+      "result": "PASS"
+    },
+    {
+      "test": "Edited live notes preserve the highlighted sentence when found",
+      "result": "PASS"
+    },
+    {
+      "test": "Live Down at last line never requests next slide",
+      "result": "PASS"
+    },
+    {
+      "test": "A different slide ID at the same index resets highlight",
+      "result": "PASS"
+    },
+    {
+      "test": "Changed total creates missing slide and follows it",
+      "result": "PASS"
+    },
+    {
+      "test": "Last live slide disables forward slide button",
+      "result": "PASS"
+    },
+    {
+      "test": "Reduced total removes excess slides",
+      "result": "PASS"
+    },
+    {
+      "test": "Notes-read failure clears text rather than showing stale script",
+      "result": "PASS"
+    },
+    {
+      "test": "Heading-like notes do not create phantom slides",
+      "result": "PASS"
+    },
+    {
+      "test": "Live notes are text, not executable HTML",
+      "result": "PASS"
+    },
+    {
+      "test": "Successful notes update clears earlier failure notice",
+      "result": "PASS"
+    },
+    {
+      "test": "Refresh asks native app to reread all notes",
+      "result": "PASS"
+    },
+    {
+      "test": "Successful update clears transient reading notice",
+      "result": "PASS"
+    },
+    {
+      "test": "Presentation-key capture requires explicit native opt-in",
+      "result": "PASS"
+    },
+    {
+      "test": "UI accurately shows enabled native arrow mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Escape requests release of global arrow keys",
+      "result": "PASS"
+    },
+    {
+      "test": "Native is told to suspend controls while help is open",
+      "result": "PASS"
+    },
+    {
+      "test": "Disconnect visibly restores snapshot mode and turns capture off",
+      "result": "PASS"
+    },
+    {
+      "test": "Live heading-like notes survive round trip through manual editor",
+      "result": "PASS"
+    },
+    {
+      "test": "Mismatched notes packet is rejected and requests unlink",
+      "result": "PASS"
+    },
+    {
+      "test": "Repeated identical speaking lines keep their exact position on polling",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 1180\u00d7850",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader has visible height at 1180\u00d7850",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 660\u00d7600",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader has visible height at 660\u00d7600",
+      "result": "PASS"
+    },
+    {
+      "test": "No horizontal overflow at 390\u00d7844",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader has visible height at 390\u00d7844",
+      "result": "PASS"
+    },
+    {
+      "test": "Exactly one live line stays highlighted",
+      "result": "PASS"
+    },
+    {
+      "test": "Actual file-URL launch and real file-origin storage",
+      "result": "NOT RUN",
+      "reason": "This test environment blocks file URLs by policy. No policy bypass attempted."
+    },
+    {
+      "test": "No external network requests",
+      "result": "PASS"
+    },
+    {
+      "test": "No browser JavaScript errors",
+      "result": "PASS"
+    }
+  ]
+}

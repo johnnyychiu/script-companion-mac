@@ -1,0 +1,2 @@
+# Tested browser automation dependency; not needed to run the app.
+playwright==1.57.0

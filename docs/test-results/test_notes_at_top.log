@@ -1,0 +1,63 @@
+PASS No slide heading remains inside the notes area
+PASS Slide heading is beside the snapshot in the lower session panel
+PASS Notes area starts at the first content pixel
+PASS Restored highlighted line starts 4 pixels from content top
+PASS Full slide title remains in a hover tooltip
+PASS Accidental slide change restores the line and preview
+PASS Returning line keeps the 4-pixel top inset
+PASS Next line is also aligned at 4 pixels
+PASS First line has no extra blank spacer
+PASS Last line can reach the same top position
+PASS Presentation timer still counts
+PASS Hidden snapshot does not hide the relocated slide identity
+PASS Showing the snapshot does not move notes downward
+PASS Reset-all leaves a running timer untouched
+PASS Reset-all returns current line to top without changing the slide
+PASS Reset-all still resets other slides too
+PASS 1180x760 normal: notes have no top header or spacer
+PASS 1180x760 normal: metadata below notes and above timer
+PASS 1180x760 normal: no horizontal overflow
+PASS 1180x760 normal: reader retains at least 160 pixels height
+PASS 1180x760 compact: notes have no top header or spacer
+PASS 1180x760 compact: metadata below notes and above timer
+PASS 1180x760 compact: no horizontal overflow
+PASS 1180x760 compact: reader retains at least 160 pixels height
+PASS 920x700 normal: notes have no top header or spacer
+PASS 920x700 normal: metadata below notes and above timer
+PASS 920x700 normal: no horizontal overflow
+PASS 920x700 normal: reader retains at least 160 pixels height
+PASS 920x700 compact: notes have no top header or spacer
+PASS 920x700 compact: metadata below notes and above timer
+PASS 920x700 compact: no horizontal overflow
+PASS 920x700 compact: reader retains at least 160 pixels height
+PASS 660x540 normal: notes have no top header or spacer
+PASS 660x540 normal: metadata below notes and above timer
+PASS 660x540 normal: no horizontal overflow
+PASS 660x540 normal: reader retains at least 160 pixels height
+PASS 660x540 compact: notes have no top header or spacer
+PASS 660x540 compact: metadata below notes and above timer
+PASS 660x540 compact: no horizontal overflow
+PASS 660x540 compact: reader retains at least 160 pixels height
+PASS 520x700 normal: notes have no top header or spacer
+PASS 520x700 normal: metadata below notes and above timer
+PASS 520x700 normal: no horizontal overflow
+PASS 520x700 normal: reader retains at least 160 pixels height
+PASS 520x700 compact: notes have no top header or spacer
+PASS 520x700 compact: metadata below notes and above timer
+PASS 520x700 compact: no horizontal overflow
+PASS 520x700 compact: reader retains at least 160 pixels height
+PASS 390x844 normal: notes have no top header or spacer
+PASS 390x844 normal: metadata below notes and above timer
+PASS 390x844 normal: no horizontal overflow
+PASS 390x844 normal: reader retains at least 160 pixels height
+PASS 390x844 compact: notes have no top header or spacer
+PASS 390x844 compact: metadata below notes and above timer
+PASS 390x844 compact: no horizontal overflow
+PASS 390x844 compact: reader retains at least 160 pixels height
+PASS Opening setup and increasing text retain top alignment
+PASS Live slide packet updates the relocated title and count
+PASS Live return restores line memory at the upper edge
+PASS Line movement sends no PowerPoint slide request
+PASS No JavaScript exceptions
+PASS No external requests
+62 notes-at-top checks passed.

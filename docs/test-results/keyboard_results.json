@@ -1,0 +1,73 @@
+{
+  "environment": "Offline Linux Chromium with simulated native packets, not PowerPoint",
+  "checks": [
+    {
+      "test": "Rejected direct command keeps notes linked",
+      "result": "PASS"
+    },
+    {
+      "test": "Rejected direct command does not disable an enabled line-key mode",
+      "result": "PASS"
+    },
+    {
+      "test": "PowerPoint keys toggle remains usable in follow-only mode",
+      "result": "PASS"
+    },
+    {
+      "test": "Unsafe direct slide buttons are still paused",
+      "result": "PASS"
+    },
+    {
+      "test": "Error retains original reason and describes recovery",
+      "result": "PASS"
+    },
+    {
+      "test": "Down still advances highlighted line after direct command fails",
+      "result": "PASS"
+    },
+    {
+      "test": "Down at final line does not change slide",
+      "result": "PASS"
+    },
+    {
+      "test": "A real slide-status change restores the earlier highlighted line",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader-focused Right does not retry rejected slide adapter",
+      "result": "PASS"
+    },
+    {
+      "test": "Reader-focused warning explains PowerPoint must have focus",
+      "result": "PASS"
+    },
+    {
+      "test": "Line-key mode can be requested after direct failure",
+      "result": "PASS"
+    },
+    {
+      "test": "User can switch capture off even while notes are busy",
+      "result": "PASS"
+    },
+    {
+      "test": "Open reader help blocks native line movement",
+      "result": "PASS"
+    },
+    {
+      "test": "Escape requests line capture release",
+      "result": "PASS"
+    },
+    {
+      "test": "Unlink releases capture and disables its toggle",
+      "result": "PASS"
+    },
+    {
+      "test": "UI shows version 0.5",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript exceptions",
+      "result": "PASS"
+    }
+  ]
+}

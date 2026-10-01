@@ -1,0 +1,65 @@
+PASS Offline render: four example slides and one current line
+PASS Browser has no live PowerPoint controls
+PASS Down moves exactly one line, not slide
+PASS Up moves one line backwards
+PASS Up stops at first line
+PASS Down at final line never changes slide
+PASS Right moves to next script slide, line 1
+PASS Left restores the previous slide saved line
+PASS Left stops at first slide
+PASS Page Down restores next slide position
+PASS Held-arrow repeat is suppressed
+PASS Editor arrow keys do not navigate reader
+PASS Duplicate script slide numbers rejected
+PASS PPTX notes imported in deck order
+PASS Imported total includes a slide without notes
+PASS Blank notes slide stays in place and has no line highlight
+PASS Unicode and XML-looking notes are safe text
+PASS Right stops at last slide
+PASS Snapshot autosave retains slide, line and structured notes
+PASS Backup includes Unicode notes and line position
+PASS Structured backup restores reader position
+PASS Native bridge announces readiness
+PASS Live deck replaces unrelated example script with actual notes
+PASS Slide counter shows current and total from native state
+PASS Live Down only highlights a line, no PowerPoint command
+PASS Unchanged live poll keeps highlighted sentence and DOM node
+PASS Right sends one next-slide request without optimistic slide change
+PASS Line movement pauses during slide navigation
+PASS Actual slide change resets highlight and clears notes for blank slide
+PASS Left sends previous-slide command
+PASS Live carriage returns and soft breaks split into three lines
+PASS Edited live notes preserve the highlighted sentence when found
+PASS Live Down at last line never requests next slide
+PASS A different slide ID at the same index resets highlight
+PASS Changed total creates missing slide and follows it
+PASS Last live slide disables forward slide button
+PASS Reduced total removes excess slides
+PASS Notes-read failure clears text rather than showing stale script
+PASS Heading-like notes do not create phantom slides
+PASS Live notes are text, not executable HTML
+PASS Successful notes update clears earlier failure notice
+PASS Refresh asks native app to reread all notes
+PASS Successful update clears transient reading notice
+PASS Presentation-key capture requires explicit native opt-in
+PASS UI accurately shows enabled native arrow mode
+PASS Escape requests release of global arrow keys
+PASS Native is told to suspend controls while help is open
+PASS Disconnect visibly restores snapshot mode and turns capture off
+PASS Live heading-like notes survive round trip through manual editor
+PASS Mismatched notes packet is rejected and requests unlink
+PASS Repeated identical speaking lines keep their exact position on polling
+PASS No horizontal overflow at 1180×850
+Reader height: 421.09375
+PASS Reader has visible height at 1180×850
+PASS No horizontal overflow at 660×600
+Reader height: 282.9375
+PASS Reader has visible height at 660×600
+PASS No horizontal overflow at 390×844
+Reader height: 415.671875
+PASS Reader has visible height at 390×844
+PASS Exactly one live line stays highlighted
+NOT RUN actual file-URL launch/storage: blocked by test-environment policy.
+PASS No external network requests
+PASS No browser JavaScript errors
+60 checks passed; 1 not run. Native macOS / PowerPoint execution remains untested.

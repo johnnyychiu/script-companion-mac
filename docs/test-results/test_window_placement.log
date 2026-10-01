@@ -1,0 +1,14 @@
+PASS: Initial placement reaches usable top with no extra 14-point gap
+PASS: Initial horizontal centering and size retained
+PASS: Dragging upward clamps at usable top, not 14 points below
+PASS: Dragging down stays where requested
+PASS: Top command preserves horizontal position
+PASS: Left and bottom protection remains 14 points
+PASS: Right-side protection remains 14 points
+PASS: Reentrant positioning is ignored
+PASS: Disconnected selected screen does not reposition to another display
+PASS: Negative-coordinate presenter display reaches its own usable top
+PASS: Window returned from a different display is placed on selected display
+PASS: Oversized frame uses available bounds retaining sides/bottom
+PASS: Positioning state released after successful placement
+13 isolated placement checks passed. AppKit screen/window behavior NOT tested.
